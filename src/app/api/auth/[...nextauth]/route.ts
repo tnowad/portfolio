@@ -6,7 +6,7 @@ import prisma from "@/lib/prisma";
 
 const handler: NextApiHandler = (req, res) => NextAuth(req, res, options);
 
-export { handler as GET, handler as POST };
+export default handler;
 
 const options = {
   providers: [

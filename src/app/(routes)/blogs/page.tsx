@@ -1,8 +1,8 @@
 "use client";
 
+import { getBlogs } from "@/server/blog";
 import Giscus from "@giscus/react";
 // import { useRouter } from "next/navigation";
-import { getBlogs } from "../(action)/blog";
 
 export default async function Page() {
   const blogs = await getBlogs();

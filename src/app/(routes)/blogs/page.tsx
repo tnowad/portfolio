@@ -4,14 +4,14 @@ import { getBlogs } from "@/server/blog";
 import Giscus from "@giscus/react";
 // import { useRouter } from "next/navigation";
 
-export default async function Page() {
-  const blogs = await getBlogs();
+export default function Page() {
+  // const blogs = await getBlogs();
 
   // const router = useRouter();
 
   return (
     <div>
-      {blogs.map((blog) => (
+      {/* {blogs.map((blog) => (
         <div key={blog.id}>
           <button
           // onClick={() => {
@@ -21,7 +21,7 @@ export default async function Page() {
             {blog.title}
           </button>
         </div>
-      ))}
+      ))} */}
       <Giscus
         id="comments"
         repo="tnowad/portfolio"

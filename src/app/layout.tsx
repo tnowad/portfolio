@@ -3,12 +3,11 @@ import "@/styles";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Nguyen Minh Tuan | Portfolio",
+  title: "Portfolio | Nguyen Minh Tuan",
+  description: "Welcome to my portfolio website!",
 };
 
 export default function RootLayout({
@@ -18,6 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className={inter.className}>
         <SessionProvider>{children}</SessionProvider>
         <Analytics />

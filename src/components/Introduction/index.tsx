@@ -7,14 +7,14 @@ import AvatarIcon from "@/assets/avatar.svg";
 export default function Introduction() {
   return (
     <motion.section
-      className="flex min-h-[800px] justify-center"
+      className="flex min-h-[800px] justify-center pt-6"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       id="home"
     >
-      <div className="container flex items-center justify-between text-gray-400">
-        <div className="grid gap-y-6">
+      <div className="container flex flex-col justify-between px-3 text-gray-400 sm:flex-row sm:items-center sm:px-0">
+        <div className="grid gap-y-3">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -70,16 +70,19 @@ export default function Introduction() {
             </motion.a>
           </div>
         </div>
-        <div className="w-[40rem]">
+        <div className="w-full md:w-[40rem]">
           <AvatarIcon />
         </div>
-        <div className="flex flex-col items-end text-purple/50">
+        <div className="flex items-center justify-center space-x-2 text-purple/50 sm:flex-col sm:items-end ">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <Link href={"/resume"} className="flex items-center">
+            <Link
+              href={"/resume"}
+              className="flex items-center whitespace-nowrap"
+            >
               Download CV
               <Icon className="ml-1 inline" icon="system-uicons:download" />
             </Link>
@@ -88,7 +91,7 @@ export default function Introduction() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
-            className="flex h-10 items-center rounded-xl border border-purple/50 px-4 font-bold duration-300 hover:bg-purple hover:text-dark"
+            className="flex h-10 items-center whitespace-nowrap rounded-xl border border-purple/50 px-4 font-bold duration-300 hover:bg-purple hover:text-dark"
           >
             <Icon className="mr-4 inline-block" icon="ri:message-3-line" />
             Let&lsquo;s talk

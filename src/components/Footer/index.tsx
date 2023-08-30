@@ -22,15 +22,19 @@ export default function Footer() {
       ref={ref}
       {...commonAnimationProps}
     >
-      <div className="container flex items-center justify-between font-extralight text-white">
+      <div className="container flex flex-col items-center justify-center font-extralight text-white sm:flex-row sm:justify-between">
         <motion.div
           {...commonAnimationProps}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-          Copyright © Nguyen Minh Tuan · 2023
+          Copyright ©{" "}
+          <span className="duration-200 hover:text-purple">
+            Nguyen Minh Tuan
+          </span>
+          · 2023
         </motion.div>
         <motion.div
-          className="flex space-x-3 text-3xl"
+          className="hidden space-x-3 text-3xl sm:flex"
           {...commonAnimationProps}
           transition={{ delay: 0.2, duration: 0.5 }}
         >

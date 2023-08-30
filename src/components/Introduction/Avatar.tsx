@@ -1,3 +1,9 @@
+"use client";
+import AvatarIcon from "./Avatar.svg";
 export default function Avatar() {
-  return <div></div>;
+  return (
+    <div>
+      <AvatarIcon />
+    </div>
+  );
 }

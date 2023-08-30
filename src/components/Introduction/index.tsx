@@ -1,13 +1,13 @@
 "use client";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
-import Avatar from "./Avatar";
 import Link from "next/link";
+import AvatarIcon from "@/assets/avatar.svg";
 
 export default function Introduction() {
   return (
     <motion.section
-      className="flex justify-center"
+      className="flex min-h-[800px] justify-center"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -28,7 +28,7 @@ export default function Introduction() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
-            className="inline-block text-5xl font-bold text-white"
+            className="inline-block text-5xl font-bold leading-[3.5rem] text-white"
           >
             Nguyen <br />
             Minh Tuan
@@ -70,8 +70,8 @@ export default function Introduction() {
             </motion.a>
           </div>
         </div>
-        <div>
-          <Avatar />
+        <div className="w-[40rem]">
+          <AvatarIcon />
         </div>
         <div className="flex flex-col items-end text-purple/50">
           <motion.div

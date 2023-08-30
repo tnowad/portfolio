@@ -1,4 +1,3 @@
-import { Octokit } from "@octokit/rest";
 import { NextResponse } from "next/server";
 import { graphql } from "@octokit/graphql";
 export async function GET() {
@@ -33,7 +32,7 @@ export async function GET() {
       `,
       {
         headers: {
-          authorization: `token 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`,
+          authorization: `token ${process.env.GITHUB_ACCESS}`,
         },
       }
     )) as any;

@@ -3,6 +3,7 @@ import "@/styles";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import classNames from "classnames";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -20,7 +21,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className={inter.className}>
+      <body className={classNames(inter.className, "bg-dark")}>
         <SessionProvider>{children}</SessionProvider>
         <Analytics />
       </body>

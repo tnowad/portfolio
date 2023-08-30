@@ -9,37 +9,37 @@ import { LayoutGroup, motion } from "framer-motion";
 const navItems = [
   {
     title: "Home",
-    link: "#home",
+    link: "/#home",
   },
   {
     title: "About me",
-    link: "#about-me",
+    link: "/#about-me",
   },
   {
     title: "Portfolio",
-    link: "#portfolio",
+    link: "/#portfolio",
   },
   {
     title: "Skills",
-    link: "#skills",
+    link: "/#skills",
   },
   {
     title: "Career",
-    link: "#career",
+    link: "/#career",
   },
   {
     title: "Blog",
-    link: "#blog",
+    link: "/#blog",
   },
 ];
 
 export default function Header() {
-  const [activeLink, setActiveLink] = useState<string>("#home");
+  const [activeLink, setActiveLink] = useState<string>("/#home");
 
   return (
-    <header className="sticky top-0 mt-9 hidden w-full justify-center sm:flex">
-      <div className="container flex h-16 items-center justify-between rounded-3xl bg-purple/5 px-6">
-        <Link href={"/"} className="h-10 w-10">
+    <header className="sticky top-0 mt-9 flex w-full justify-center">
+      <div className="container flex h-16 items-center justify-center rounded-3xl bg-purple/5 px-6 sm:justify-between">
+        <Link href={"/"} className="hidden h-10 w-10 sm:block">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -49,7 +49,7 @@ export default function Header() {
           </motion.div>
         </Link>
         <motion.div
-          className="inline-flex space-x-4"
+          className="inline-flex space-x-2 sm:space-x-4"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}

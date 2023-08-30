@@ -15,6 +15,7 @@
     "@octokit/graphql": "^7.0.1",
     "@octokit/rest": "^20.0.1",
     "@prisma/client": "5.2.0",
+    "@svgr/webpack": "^8.1.0",
     "@types/node": "20.5.1",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",

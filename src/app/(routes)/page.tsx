@@ -1,3 +1,4 @@
+import Introduction from "@/components/Introduction";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,8 +7,8 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="flex h-[200vh] justify-center">
-      <section className="container">Home</section>
+    <main>
+      <Introduction />
     </main>
   );
 }

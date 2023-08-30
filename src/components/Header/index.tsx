@@ -37,7 +37,7 @@ export default function Header() {
   const [activeLink, setActiveLink] = useState<string>("#home");
 
   return (
-    <header className="mt-9 flex w-full justify-center">
+    <header className="sticky top-0 mt-9 flex w-full justify-center">
       <div className="container flex h-16 items-center justify-between rounded-3xl bg-purple/5 px-6">
         <Link href={"/"} className="h-10 w-10">
           <motion.div

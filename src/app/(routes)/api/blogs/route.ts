@@ -32,7 +32,7 @@ export async function GET() {
       `,
       {
         headers: {
-          authorization: `token ${process.env.GITHUB_ACCESS}`,
+          authorization: `token ${process.env.GITHUB_TOKEN}`,
         },
       }
     )) as any;

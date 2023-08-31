@@ -20,16 +20,12 @@ const navItems = [
     link: "/#portfolio",
   },
   {
-    title: "Skills",
-    link: "/#skills",
-  },
-  {
-    title: "Career",
-    link: "/#career",
-  },
-  {
     title: "Blog",
     link: "/#blog",
+  },
+  {
+    title: "Skills",
+    link: "/#skills",
   },
 ];
 
@@ -38,7 +34,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 mt-9 flex w-full justify-center">
-      <div className="container flex h-16 items-center justify-center rounded-3xl bg-purple/5 px-6 sm:justify-between">
+      <div className="container flex h-16 items-center justify-center rounded-3xl bg-purple/5 px-6 duration-200 hover:bg-purple/10 sm:justify-between">
         <Link href={"/"} className="hidden h-10 w-10 sm:block">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -62,7 +58,7 @@ export default function Header() {
                 className={classnames(
                   {
                     "text-purple drop-shadow-2xl": activeLink === item.link,
-                    "text-gray-500": activeLink !== item.link,
+                    "text-gray-500 hover:text-white": activeLink !== item.link,
                   },
                   "hover:text-purple-700",
                   "transition-colors",

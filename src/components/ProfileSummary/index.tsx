@@ -25,7 +25,7 @@ export function ProfileSummary() {
       transition={{ duration: 0.5 }}
     >
       <div className="container flex justify-center">
-        <div className="grid w-full max-w-2xl grid-cols-3 grid-rows-2 gap-6">
+        <div className="grid w-full max-w-2xl grid-cols-3 gap-6">
           <GridItem
             icon={<CodeIcon />}
             title="Programmer"
@@ -44,7 +44,7 @@ export function ProfileSummary() {
             subtitle={`${yearsAsDesigner} years as`}
             inView={inView}
           />
-          <div className="col-span-3">
+          <div className="col-span-3 hidden sm:block">
             <div className="grid w-full grid-cols-3 gap-6 rounded-xl bg-purple/10 p-3">
               <div className="text-center text-white">
                 <p className="text-sm text-purple">Full-stack</p>

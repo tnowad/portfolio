@@ -1,6 +1,6 @@
 "use client";
 
-import BlogCard from "../BlogCard";
+import PostCard from "../BlogCard";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -17,7 +17,7 @@ export default function Projects() {
   };
 
   return (
-    <section className="mt-28 flex justify-center">
+    <section className="mt-28 flex justify-center" id="portfolio">
       <div className="container" ref={ref}>
         <motion.div
           className="inline-block h-10 rounded-xl bg-purple/10 px-10 text-xl font-bold leading-10 text-purple"
@@ -41,14 +41,14 @@ export default function Projects() {
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
         >
-          <BlogCard className="w-full min-w-[300px] snap-start scroll-ms-6 md:!min-w-min" />
-          <BlogCard className="w-full min-w-[300px] snap-start scroll-ms-6 md:!min-w-min" />
-          <BlogCard className="w-full min-w-[300px] snap-start scroll-ms-6 md:!min-w-min" />
-          <BlogCard className="w-full min-w-[300px] snap-start scroll-ms-6 md:!min-w-min" />
-          <BlogCard className="w-full min-w-[300px] snap-start scroll-ms-6 md:!min-w-min" />
-          <BlogCard className="w-full min-w-[300px] snap-start scroll-ms-6 md:!min-w-min" />
-          <BlogCard className="w-full min-w-[300px] snap-start scroll-ms-6 md:!min-w-min" />
-          <BlogCard className="w-full min-w-[300px] snap-start scroll-ms-6 md:!min-w-min" />
+          <PostCard className="w-full min-w-[300px] snap-start scroll-ms-6 md:!min-w-min" />
+          <PostCard className="w-full min-w-[300px] snap-start scroll-ms-6 md:!min-w-min" />
+          <PostCard className="w-full min-w-[300px] snap-start scroll-ms-6 md:!min-w-min" />
+          <PostCard className="w-full min-w-[300px] snap-start scroll-ms-6 md:!min-w-min" />
+          <PostCard className="w-full min-w-[300px] snap-start scroll-ms-6 md:!min-w-min" />
+          <PostCard className="w-full min-w-[300px] snap-start scroll-ms-6 md:!min-w-min" />
+          <PostCard className="w-full min-w-[300px] snap-start scroll-ms-6 md:!min-w-min" />
+          <PostCard className="w-full min-w-[300px] snap-start scroll-ms-6 md:!min-w-min" />
         </motion.div>
         <motion.div
           className="flex items-center justify-end text-purple"

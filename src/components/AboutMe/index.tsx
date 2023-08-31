@@ -1,17 +1,41 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import AvatarImage from "@/assets/avatar.png";
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
 
 const AboutMe = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({ opacity: 1, x: 0 });
+    } else {
+      controls.start({ opacity: 0, x: -20 });
+    }
+  }, [inView, controls]);
+
   return (
     <section className="flex justify-center">
       <div className="container flex grid-cols-12 flex-col items-center md:grid">
-        <div className="relative col-span-5 h-80 w-80 lg:col-span-4">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, x: -20 }}
+          animate={controls}
+          transition={{ duration: 0.5 }}
+          className="relative col-span-5 h-80 w-80 lg:col-span-4"
+        >
           <div className="h-full w-full rounded-full bg-white" />
           <div className="absolute -left-3 top-6 h-full w-full">
             <Image src={AvatarImage} alt="Avatar" />
           </div>
-        </div>
+        </motion.div>
         <div className="col-span-7 mt-4 text-gray-400 lg:col-span-8">
           <div className="inline-block h-10 rounded-xl bg-purple/10 px-10 text-xl font-bold leading-10 text-purple">
             🧐 About me
@@ -19,7 +43,12 @@ const AboutMe = () => {
           <h2 className="my-4 text-5xl font-bold text-white">
             Nguyen Minh Tuan
           </h2>
-          <div className="text-md">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={controls}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-md"
+          >
             <p>
               👋 Hey there, I&lsquo;m Nguyen Minh Tuan, and my software journey
               began in 2021!
@@ -43,7 +72,7 @@ const AboutMe = () => {
               🌟 Let&lsquo;s embark on a journey of coding, learning, and
               creating together – the future is looking incredibly bright!
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

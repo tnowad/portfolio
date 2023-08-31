@@ -52,12 +52,17 @@ const AboutMe = () => {
           </div>
         </motion.div>
         <div className="col-span-7 mt-4 text-gray-400 lg:col-span-8">
-          <div className="inline-block h-10 rounded-xl bg-purple/10 px-10 text-xl font-bold leading-10 text-purple">
-            🧐 About me
-          </div>
-          <h2 className="my-4 text-5xl font-bold text-white">
+          <motion.div {...fadeInUp}>
+            <div className="inline-block h-10 rounded-xl bg-purple/10 px-10 text-xl font-bold leading-10 text-purple">
+              🧐 About me
+            </div>
+          </motion.div>
+          <motion.h2
+            {...fadeInUp}
+            className="my-4 text-5xl font-bold text-white"
+          >
             Nguyen Minh Tuan
-          </h2>
+          </motion.h2>
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={controls}

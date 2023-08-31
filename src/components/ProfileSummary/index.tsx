@@ -4,14 +4,29 @@ import React from "react";
 import CodeIcon from "@/assets/code.svg";
 import ProjectIcon from "@/assets/project.svg";
 import DesignIcon from "@/assets/design.svg";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 export function ProfileSummary() {
   const yearsAsProgrammer = new Date().getFullYear() - 2021;
   const projectsWorkedOn = 5;
   const yearsAsDesigner = new Date().getFullYear() - 2022;
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.4,
+  });
+  const commonAnimationProps = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: inView ? 1 : 0, y: inView ? 0 : 20 },
+    transition: { duration: 0.5 },
+  };
 
   return (
-    <section className="mt-3 flex justify-center border-y-[0.5px] border-purple py-6">
+    <motion.section
+      className="mt-3 flex justify-center border-y-[0.5px] border-purple py-6"
+      ref={ref}
+      {...commonAnimationProps}
+    >
       <div className="container flex justify-center">
         <div className="grid w-full max-w-2xl grid-cols-3 grid-rows-2 gap-6">
           <div className="flex flex-col justify-center text-center">
@@ -55,6 +70,6 @@ export function ProfileSummary() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

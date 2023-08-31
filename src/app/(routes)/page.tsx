@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import AboutMe from "@/components/AboutMe";
 import Projects from "@/components/Projects";
 import Blog from "@/components/Blogs";
+import Skills from "@/components/Skills";
 
 export const metadata: Metadata = {
   title: "Portfolio | Nguyen Minh Tuan",
@@ -17,6 +18,7 @@ export default function Home() {
       <AboutMe />
       <Projects />
       <Blog />
+      <Skills />
     </main>
   );
 }

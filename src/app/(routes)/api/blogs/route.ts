@@ -36,6 +36,7 @@ export async function GET() {
         },
       }
     )) as any;
+    console.log(repository);
     return new NextResponse(JSON.stringify(repository.discussions.nodes));
   } catch (error) {
     console.log(error);

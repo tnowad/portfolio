@@ -1,6 +1,6 @@
 "use client";
 
-import PostCard from "@/components/BlogCard";
+import PostCard from "@/components/PostCard";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";

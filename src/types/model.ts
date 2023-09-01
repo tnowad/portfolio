@@ -1,17 +1,36 @@
 export interface Post {
   id: string;
-  title: string;
-  url: string;
   number: number;
-  bodyText: string;
+  url: string;
+  title: string;
   createdAt: string;
-  lastEditedAt: null;
+  bodyText: string;
+  bodyHTML: string;
+  category: {
+    id: string;
+    description: string;
+    name: string;
+  };
+  publishedAt: string;
+  updatedAt: string;
   author: {
     login: string;
-    url: string;
     avatarUrl: string;
+    url: string;
   };
-  labels: Label[];
+  repository: {
+    id: string;
+  };
+  labels: {
+    nodes: [
+      {
+        name: string;
+      },
+      {
+        name: string;
+      },
+    ];
+  };
 }
 
 export interface Label {}

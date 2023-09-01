@@ -1,28 +1,9 @@
-"use client";
-
+import { Post } from "@/types/model";
 import Giscus from "@giscus/react";
 
 async function getBlog(id: string) {
   const response = await fetch(`http://localhost:3000/api/blogs/${id}`);
-  return (await response.json()) as Blog;
-}
-
-interface Blog {
-  id: string;
-  title: string;
-  url: string;
-  number: 1;
-  bodyText: string;
-  createdAt: string;
-  lastEditedAt: null;
-  author: {
-    login: string;
-    url: string;
-    avatarUrl: string;
-  };
-  labels: {
-    nodes: [];
-  };
+  return (await response.json()) as Post;
 }
 
 export default async function Page({ params }: { params: { blogId: string } }) {

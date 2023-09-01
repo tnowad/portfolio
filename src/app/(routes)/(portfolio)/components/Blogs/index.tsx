@@ -1,11 +1,11 @@
 "use client";
 
-import PostCard from "../BlogCard";
+import PostCard from "@/components/BlogCard";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-export default function Projects() {
+export default function Blog() {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.4,
@@ -17,7 +17,7 @@ export default function Projects() {
   };
 
   return (
-    <section className="mt-28 flex justify-center" id="portfolio">
+    <section className="mt-10 flex justify-center" id="blog">
       <div className="container" ref={ref}>
         <motion.div
           className="inline-block h-10 rounded-xl bg-purple/10 px-10 text-xl font-bold leading-10 text-purple"
@@ -25,7 +25,7 @@ export default function Projects() {
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
           transition={{ duration: 0.5 }}
         >
-          🔗 Portfolio
+          ️🎯 Blog
         </motion.div>
         <motion.h2
           className="mt-7 text-5xl font-bold text-white"
@@ -33,7 +33,7 @@ export default function Projects() {
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
           transition={{ duration: 0.5 }}
         >
-          Work and projects
+          You Might Have Missed
         </motion.h2>
         <motion.div
           className="flex w-full snap-x gap-2 overflow-x-auto py-6 md:grid md:grid-cols-3 lg:grid-cols-4"
@@ -56,7 +56,7 @@ export default function Projects() {
           animate={{ opacity: inView ? 1 : 0 }}
           transition={{ duration: 0.5 }}
         >
-          See more projects on here
+          See More Posts Here
           <Icon className="inline-block" icon="line-md:arrow-small-right" />
         </motion.div>
       </div>

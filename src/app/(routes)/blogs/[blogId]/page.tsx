@@ -10,7 +10,7 @@ import Link from "next/link";
 export const revalidate = 60;
 
 async function getPost(id: string) {
-  const response = await fetch(`${process.env.VERCEL_URL}/api/blogs/${id}`, {
+  const response = await fetch(`/api/blogs/${id}`, {
     // cache: "force-cache",
   });
   return (await response.json()) as Post;

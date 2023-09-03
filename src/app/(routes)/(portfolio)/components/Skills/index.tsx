@@ -40,11 +40,11 @@ export default function Skills() {
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
         >
-          <div className="my-9 text-gray-400">
+          <div className="my-9 text-gray-400 text-center">
             Technologies I don&apos;t use every day
           </div>
           <motion.div
-            className="flex text-6xl text-purple/50"
+            className="flex text-6xl text-purple/50 flex-wrap justify-center"
             variants={containerVariants}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
@@ -61,11 +61,11 @@ export default function Skills() {
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
         >
-          <div className="my-9 text-gray-400">
+          <div className="my-9 text-gray-400 text-center">
             Other technologies with which I have worked on projects
           </div>
           <motion.div
-            className="flex text-6xl text-purple/50"
+            className="flex text-6xl text-purple/50 flex-wrap justify-center"
             variants={containerVariants}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}

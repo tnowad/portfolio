@@ -3,7 +3,6 @@ import Introduction from "./components/Introduction";
 import { Metadata } from "next";
 import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
-import Blog from "./components/Blogs";
 import Skills from "./components/Skills";
 
 export const metadata: Metadata = {
@@ -17,7 +16,6 @@ export default function Home() {
       <ProfileSummary />
       <AboutMe />
       <Projects />
-      <Blog />
       <Skills />
     </main>
   );

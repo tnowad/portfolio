@@ -16,6 +16,21 @@ export default function Projects() {
     visible: { opacity: 1 },
   };
 
+  const projects = [
+    {
+      title: "Portfolio",
+      description: "A portfolio website built with Next.js and TailwindCSS.",
+      link: "https://github.com/tnowad/portfolio",
+      labels: ["Nextjs", "TailwindCSS"],
+    },
+    {
+      title: "News Copilot Reader",
+      description: "A news reader app integrated with AI to support writers.",
+      link: "https://github.com/tnowad/news-copilot-reader",
+      labels: ["SvelteKit", "GPT-2", "TailwindCSS"],
+    },
+  ];
+
   return (
     <section className="mt-28 flex justify-center" id="portfolio">
       <div className="container" ref={ref}>
@@ -41,14 +56,16 @@ export default function Projects() {
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
         >
-          <PostCard className="w-full min-w-[300px] snap-start scroll-ms-6 md:!min-w-min" />
-          <PostCard className="w-full min-w-[300px] snap-start scroll-ms-6 md:!min-w-min" />
-          <PostCard className="w-full min-w-[300px] snap-start scroll-ms-6 md:!min-w-min" />
-          <PostCard className="w-full min-w-[300px] snap-start scroll-ms-6 md:!min-w-min" />
-          <PostCard className="w-full min-w-[300px] snap-start scroll-ms-6 md:!min-w-min" />
-          <PostCard className="w-full min-w-[300px] snap-start scroll-ms-6 md:!min-w-min" />
-          <PostCard className="w-full min-w-[300px] snap-start scroll-ms-6 md:!min-w-min" />
-          <PostCard className="w-full min-w-[300px] snap-start scroll-ms-6 md:!min-w-min" />
+          {projects.map((project) => (
+            <a href={project.link} key={project.title}>
+              <PostCard
+                className="w-full min-w-[300px] snap-start scroll-ms-6 md:!min-w-min"
+                title={project.title}
+                labels={project.labels}
+                description={project.description}
+              />
+            </a>
+          ))}
         </motion.div>
         <motion.div
           className="flex items-center justify-end text-purple"

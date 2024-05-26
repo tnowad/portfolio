@@ -12,6 +12,9 @@ const nextConfig = {
   images: {
     domains: ["avatars.githubusercontent.com"],
   },
+  experimental: {
+    reactCompiler: true,
+  },
 };
 
 module.exports = nextConfig;

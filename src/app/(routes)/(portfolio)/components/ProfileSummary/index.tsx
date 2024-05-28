@@ -10,7 +10,7 @@ import GridItem from "./GridItem";
 export function ProfileSummary() {
   const yearsAsProgrammer = new Date().getFullYear() - 2021;
   const projectsWorkedOn = 5;
-  const yearsAsDesigner = new Date().getFullYear() - 2022;
+  const yearsAsLinuxUser = new Date().getFullYear() - 2021;
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.4,
@@ -40,8 +40,8 @@ export function ProfileSummary() {
           />
           <GridItem
             icon={<DesignIcon />}
-            title="Designer"
-            subtitle={`${yearsAsDesigner} years as`}
+            title="Linux User"
+            subtitle={`${yearsAsLinuxUser} years as`}
             inView={inView}
           />
           <div className="col-span-3 hidden sm:block">
